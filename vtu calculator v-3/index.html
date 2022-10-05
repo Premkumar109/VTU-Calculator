@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>vtu calculator</title>
+  <!-- css -->
+  <!-- Bootstrap Core CSS -->
+  <!-- Bootstrap Core CSS -->
+  <link href="static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <!-- Custom CSS -->
+  <link href="static/css/style.css" rel='stylesheet' type='text/css' />
+  <!-- font-awesome icons -->
+  <link href="static/css/fontawesome-all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+  <!-- bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+  <header>
+    <div class="home">
+      <h1>VTU <span>SGPA</span> &<span> CGPA</span> calculator </h1>
+      <p>Calculate your SGPA and CGPA here!</p>
+      <div class="button">
+        <a class="btn btn-warning" href="sgpa.html">Calculate SGPA</a>
+        <a class="btn btn-warning" href="cgpa.html">Calculate CGPA</a>
+      </div>
+  </header>
+
+  <div class="container">
+    <div class="login mb-sm-5 px-4 mx-auto mw-100">
+      <form id="cgpac" action="#" method="post">
+        <fieldset>
+          <div class="row justify-content-md-center">
+            <div class="col-5">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-4">
+                  <label class="col-form-label">CGPA/SGPA</label>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <input type="text" class="form-control" id="gpa" name="gpa" placeholder="CGPA/SGPA" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <br>
+        <div class='text-center' style="margin-top: 10px">
+          <button type="submit" class="btn btn-warning">Calculate Percentage</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <fieldset disabled>
+        <div class="container" style="margin:0 auto; width: 50%;">
+          <legend>Result</legend>
+          <div class="form-row">
+            <div class="form-group col-md-6 mb-4">
+              <label class="col-form-label">Percentage</label>
+            </div>
+            <div class="col-md-6 mb-4">
+              <input type="text" id="percentage" class="form-control" placeholder="Percentage">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  </section>
+  </div>
+
+
+
+
+  <script type="text/javascript">
+    document.getElementById('cgpac').onsubmit = function() {
+      var percentage;
+      var g = document.getElementById('gpa').value;
+      percentage = (g - 0.75) * 10;
+      document.getElementById('percentage').value = percentage.toFixed(2);
+      return false;
+    };
+  </script>
+</body>
+
+</html>
